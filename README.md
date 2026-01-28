@@ -81,6 +81,8 @@ python backend/app.py
 Frontend
 Open frontend/index.html in a browser.
 
+## you can play with my model using huggingface 
+
 ``` python
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
