@@ -41,7 +41,7 @@ def generate(state: ChatState) -> ChatState:
 {h}
 
 ### response:""")
-    
+#this is 
     if li.find("\n### response:")!=-1:
         li=li[li.find("\n### response:")+len("\n### response:"):]
     if li.find("### context:")!=-1:

@@ -4,7 +4,7 @@ const userInput = document.getElementById("user-input");
 async function sendMessage() {
   const text = userInput.value.trim();
   if (text === "") return;
-
+//hi
   addMessage(text, "user");
   userInput.value = "";
 
@@ -43,7 +43,7 @@ function addMessage(text, sender) {
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Enter key support
+// Enter key supportl
 userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     sendMessage();
