@@ -81,4 +81,28 @@ python backend/app.py
 Frontend
 Open frontend/index.html in a browser.
 
+``` python
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from peft import PeftModel
+
+from transformers import pipeline
+base_model = "Qwen/Qwen2.5-3B-Instruct"
+adapter_repo = "Mohamed26/Qwen2.5-3B-Instruct-qlora-zahra"
+
+tokenizer = AutoTokenizer.from_pretrained(base_model)
+base = AutoModelForCausalLM.from_pretrained(base_model, device_map="auto")
+
+model = PeftModel.from_pretrained(base, adapter_repo)
+gen_pipe = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    max_new_tokens=100,
+    temperature=0.7,
+    do_sample=True,
+)
+##now play with the model
+```
+
+
 
