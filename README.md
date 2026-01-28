@@ -71,7 +71,7 @@ venv\Scripts\activate      # Windows
 ```
 3️⃣ Install Dependencies
 ``` bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 ▶️ Running the Application
 Backend
